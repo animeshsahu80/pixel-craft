@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	rules: {
+		"prefer-spread": "off",
+	  },
 	darkMode: ["class"],
 	content: [
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",

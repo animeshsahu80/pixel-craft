@@ -6,10 +6,11 @@ interface MongooseConnection{
     conn : Mongoose | null;
     promise: Promise<Mongoose> | null;
 }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let cached : MongooseConnection= (global as any).mongoose;
 
 if(!cached){
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     cached=(global as any).mongoose={
         conn:null,
         promise:null
@@ -29,5 +30,5 @@ export const connectToDB=async () =>{
     )
     cached.conn= await cached.promise;
     return cached.conn;
-    
+
 }

@@ -1,8 +1,6 @@
 import { Document, model, models, Schema } from "mongoose";
-import { aspectRatioOptions, transformationTypes } from "../../../../constants";
 
 
-import { Types } from "mongoose";
 
 export interface IImage extends Document {
   title: string;
@@ -20,7 +18,7 @@ export interface IImage extends Document {
     _id:string,
     firstName:string;
     lastName: string;
-    
+
   };
   createdAt: Date;
   updatedAt: Date;
