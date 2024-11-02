@@ -24,7 +24,7 @@ interface MongooseConnection {
     cached.promise = 
       cached.promise || 
       mongoose.connect(MONGODB_URL, { 
-        dbName: 'pixel craft', bufferCommands: false 
+        dbName: 'pixelcraft', bufferCommands: false 
       })
     console.log('DB connected');
     cached.conn = await cached.promise;
