@@ -73,6 +73,7 @@ export async function POST(req: Request) {
       last_name,
       username,
     } = evt.data;
+    console.log('id', evt.data.id);
     console.log('evttttt', evt.data);
     const user = {
       clerkId: id,
