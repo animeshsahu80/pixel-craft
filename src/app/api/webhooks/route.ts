@@ -10,7 +10,6 @@ import { createClerkClient } from "@clerk/backend";
 export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the endpoint
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
-  console.log("hiii");
   if (!WEBHOOK_SECRET) {
     throw new Error(
       "Please add WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local"
@@ -63,7 +62,7 @@ export async function POST(req: Request) {
   const eventType = evt.type;
   console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
   console.log("Webhook body:", body);
-  console.log("evt", evt.data);
+  console.log("evtwewtt", evt.data);
   //   CREATE
   if (eventType === "user.created") {
     const {
@@ -74,7 +73,7 @@ export async function POST(req: Request) {
       last_name,
       username,
     } = evt.data;
-
+    console.log('evttttt', evt.data);
     const user = {
       clerkId: id,
       email: email_addresses[0].email_address,
@@ -83,9 +82,7 @@ export async function POST(req: Request) {
       lastName: last_name,
       photo: image_url,
     };
-    console.log("user", user);
     const newUser = await createUser(user);
-    console.log(" new user", newUser);
 
     // Set public metadata
     if (newUser) {
