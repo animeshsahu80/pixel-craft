@@ -33,14 +33,14 @@ const TranformationForm = ({action, data=null}: TransformationFormProps) => {
         publicId: data?.publicId,
       }
     :defaultValues;
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues:initialValues,
-  });
+//   const form = useForm<z.infer<typeof formSchema>>({
+//     resolver: zodResolver(formSchema),
+//     defaultValues:initialValues,
+//   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+//   function onSubmit(values: z.infer<typeof formSchema>) {
+//     console.log(values);
+//   }
   return (
     <>
       {/* <Form {...form}>
