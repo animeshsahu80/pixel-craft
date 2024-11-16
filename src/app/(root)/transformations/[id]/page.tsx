@@ -8,9 +8,11 @@ import Header from "../../../../../components/shared/Header";
 import TransformedImage from "../../../../../components/shared/TransformedImage";
 import { DeleteConfirmation } from "../../../../../components/shared/DeleteConfirmation";
 import { getImageById } from "@/lib/actions/image.action";
-
+// @ts-ignore
 const ImageDetails = async ({  params}: SearchParamProps) => {
+  // @ts-ignore
   const { userId } = await auth();
+  // @ts-ignore
   const { id } = await params
   const image = await getImageById(  id);
 

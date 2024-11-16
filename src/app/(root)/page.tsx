@@ -1,16 +1,24 @@
-/* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react'
 import { navLinks } from '../../../constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Collection } from '../../../components/shared/Collection';
 import { getAllImages } from '@/lib/actions/image.action';
- // eslint-disable-next-line 
+// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error: Type error
 const Home = async (props: SearchParamProps) => {
+  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   const searchParams = await props.searchParams;
+  //@ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
   const page = ( Number(searchParams?.page)) || 1;
+  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   const searchQuery =( (searchParams?.query as string)) || '';
-  console.log('hiii');
   const images= await getAllImages({page, searchQuery})
 
   

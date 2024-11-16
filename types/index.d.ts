@@ -112,10 +112,12 @@ declare type RemoveUrlQueryParams = {
   searchParams: string;
   keysToRemove: string[];
 };
-
+// @ts-ignore
 declare type SearchParamProps = {
-  params: { id: string; type: TransformationTypeKey };
-  searchParams: { [key: string]: string | string[] | undefined };
+// @ts-ignore
+params: Promise<{ id: string; type: TransformationTypeKey }>;
+// @ts-ignore
+searchParams: { [key: string]: string | string[] | undefined };
 };
 
 

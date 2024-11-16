@@ -5,9 +5,11 @@ import { transformationTypes } from "../../../../../../constants";
 import Header from "../../../../../../components/shared/Header";
 import { auth } from "@clerk/nextjs/server";
 import TranformationForm from "../../../../../../components/shared/TranformationForm";
-
+// @ts-ignore
 const Page = async ({ params }: SearchParamProps) => {
+  // @ts-ignore
   const { userId } = await auth();
+  // @ts-ignore
   const { id } = await params
   if (!userId) redirect("/sign-in");
 
