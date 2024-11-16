@@ -32,7 +32,7 @@ declare type AddImageParams = {
     prompt: string | undefined;
     color: string | undefined;
   };
-  userId: string;
+  userId: string |null;
   path: string;
 };
 
@@ -51,7 +51,7 @@ declare type UpdateImageParams = {
     prompt: string | undefined;
     color: string | undefined;
   };
-  userId: string;
+  userId: string|null;
   path: string;
 };
 
@@ -117,6 +117,7 @@ declare type SearchParamProps = {
   params: { id: string; type: TransformationTypeKey };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
 
 declare type TransformationFormProps = {
   action: "Add" | "Update";

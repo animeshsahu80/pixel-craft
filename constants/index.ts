@@ -161,7 +161,7 @@ export const navLinks = [
     },
   };
   
-  export const aspectRatioOptions = {
+  export const  aspectRatioOptions = {
     "1:1": {
       aspectRatio: "1:1",
       label: "Square (1:1)",
